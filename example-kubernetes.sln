@@ -3,7 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31025.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-kubernetes", "example-kubernetes\example-kubernetes.csproj", "{EB7D9D22-2D42-47F4-A3E6-3C1DA6BBB25A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "example-kubernetes", "example-kubernetes\example-kubernetes.csproj", "{EB7D9D22-2D42-47F4-A3E6-3C1DA6BBB25A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Kuberntes", "Kuberntes", "{9337F41D-579E-44F3-BDB7-489021C34ADE}"
+	ProjectSection(SolutionItems) = preProject
+		example-kubernetes-deploy.yml = example-kubernetes-deploy.yml
+		example-kubernetes-pod.yml = example-kubernetes-pod.yml
+		example-kubernetes-services.yml = example-kubernetes-services.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

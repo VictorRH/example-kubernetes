@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-kubernetes-pod
+  labels:
+    app: example-kubernetes
+    type: example-kubernetes
+spec:
+  containers:
+    - name: example-kubernetes-app
+      image: chilaquilchk/examplekubernetes:latest
+      ports:
+        - containerPort: 80

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-kubernetes-deploy
+  labels:
+    name: example-kubernetes-deploy
+    app: example-kubernetes
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: example-kubernetes
+      type: example-kubernetes
+  template:
+    metadata:
+      name: example-kubernetes-pod
+      labels:
+        app: example-kubernetes
+        type: example-kubernetes
+    spec:
+      containers:
+        - name: example-kubernetes-app
+          image: chilaquilchk/examplekubernetes:latest
+          ports:
+            - containerPort: 80
