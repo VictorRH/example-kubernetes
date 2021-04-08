@@ -10,6 +10,7 @@ spec:
   ports:
     - port: 80
       targetPort: 80
+      protocol: TCP
+      name: http
   selector:
     app: example-kubernetes
-    type: example-kubernetes

@@ -6,7 +6,7 @@ metadata:
     name: example-kubernetes-deploy
     app: example-kubernetes
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: example-kubernetes
@@ -19,7 +19,10 @@ spec:
         type: example-kubernetes
     spec:
       containers:
-        - name: example-kubernetes-app
-          image: chilaquilchk/examplekubernetes:latest
+        - image: chilaquilchk/examplekubernetes:latest
+          imagePullPolicy: IfNotPresent
+          name: example-kubernetes-app
           ports:
             - containerPort: 80
+       imagePullSecrets:
+       - name: regsecret
